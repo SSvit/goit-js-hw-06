@@ -13,20 +13,33 @@ const images = [
   },
 ];
 
+// Напиши скрипт для створення галереї зображень 
+//на підставі масиву даних. 
+//HTML містить список ul.gallery.
 
-const list = document.querySelector('.gallery')
+
+// 1. Використовуй масив об'єктів images для створення елементів <img>, 
+// вкладених в <li>. Для створення розмітки використовуй шаблонні рядки 
+// і метод insertAdjacentHTML().
+
+// Усі елементи галереї повинні додаватися в DOM за одну операцію додавання.
+// Додай мінімальне оформлення галереї флексбоксами або грідами через CSS класи.
+
+
+const listLu = document.querySelector('.gallery')
 
 const markup = images
-	.map(image => `<li><img class="picture" src=${image.url} width = '400' alt='${image.alt}'></img></li>`)
+	.map(image => `<li><img class="pictures" src=${image.url} width = '400' alt='${image.alt}'></img></li>`)
 	.join('')
 
-  list.insertAdjacentHTML('beforeend', markup)
-    // const img = document.createElement('img')
+  // listLu.insertAdjacentHTML('beforeend', markup)
   
-const pictures = document.querySelectorAll('.picture')
+const pictures = document.querySelectorAll('.pictures')
 
-list.style.display = 'flex';
-list.style.flexWrap = 'column-reverse'
-list.style.listStyle = 'none'
-list.style.gap = '20px'
-list.style.justifyContent = 'center'
+// listLu.style.display = 'flex';
+// listLu.style.flexWrap = 'column-reverse'
+// listLu.style.listStyle = 'none'
+// listLu.style.gap = '20px'
+// listLu.style.justifyContent = 'center'
+
+console.log(listLu);

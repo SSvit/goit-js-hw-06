@@ -26,15 +26,15 @@ const ingredients = [
 // Після чого, вставить усі <li> за одну операцію у список ul#ingredients.
 
 
-const list = document.querySelector('#ingredients')
+const listEl = document.querySelector('#ingredients')
 const liArray = []
 
 ingredients.forEach(ingredient => {
-	const item = document.createElement('li')
-	item.className = 'item'
-	item.textContent = ingredient
-	liArray.push(item)
+	const itemLi = document.createElement('li')
+	itemLi.className = 'item'
+	itemLi.textContent = ingredient
+	liArray.push(itemLi)
 })
 
-list.append(...liArray)
+listEl.append(...liArray)
 console.log(liArray);
