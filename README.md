@@ -67,12 +67,24 @@ TASK-06
 Якщо введена правильна кількість символів, то border інпуту стає зеленим, якщо неправильна кількість - червоним.
 Для додавання стилів використовуй CSS-класи valid і invalid, які ми вже додали у вихідні файли завдання.
 
+// const validInput = document.guerySelector('#validation-input')
+// const dataValue = Namber(validInput.dataset.length);
 
+// validInput.addEventListener('blur', changeClass);
+
+// function changeClass(event) {
+// 	if (event.carrentTarget.value.length === 0) {
+// 		validInput.classList.remove('invalid');
+// 		validInput.classList. remove('valid');
+// 	} else if (event.carrentTarget.value.length !== dataValue) {
+// 		validInput.classList.add('invalid');
+// 		validInput.classList.remove('valid');
+// 	}
+// }
 
 
 TASK-07
 Напиши скрипт, який реагує на зміну значення input#font-size-control (подія input) і змінює інлайн-стиль span#text, оновлюючи властивість font-size. В результаті, перетягуючи повзунок, буде змінюватися розмір тексту.
-
 
 
 

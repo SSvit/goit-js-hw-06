@@ -32,14 +32,14 @@ const markup = images
 	.map(image => `<li><img class="pictures" src=${image.url} width = '400' alt='${image.alt}'></img></li>`)
 	.join('')
 
-  // listLu.insertAdjacentHTML('beforeend', markup)
+  listLu.insertAdjacentHTML('beforeend', markup)
   
 const pictures = document.querySelectorAll('.pictures')
 
-// listLu.style.display = 'flex';
-// listLu.style.flexWrap = 'column-reverse'
-// listLu.style.listStyle = 'none'
-// listLu.style.gap = '20px'
-// listLu.style.justifyContent = 'center'
+listLu.style.display = 'flex';
+listLu.style.flexWrap = 'column-reverse'
+listLu.style.listStyle = 'none'
+listLu.style.gap = '20px'
+listLu.style.justifyContent = 'center'
 
 console.log(listLu);

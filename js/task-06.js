@@ -13,3 +13,8 @@ textInput.addEventListener('blur', event => {
 		textInput.classList.add('invalid')
 	}
 })
+
+
+
+
+
