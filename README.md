@@ -67,20 +67,93 @@ TASK-06
 Якщо введена правильна кількість символів, то border інпуту стає зеленим, якщо неправильна кількість - червоним.
 Для додавання стилів використовуй CSS-класи valid і invalid, які ми вже додали у вихідні файли завдання.
 
-// const validInput = document.guerySelector('#validation-input')
-// const dataValue = Namber(validInput.dataset.length);
+// const textInput = document.querySelector('#validation-input')
+// console.log(textInput.getAttribute('data-length'))
+// textInput.addEventListener('blur', event => {
+// 	if (event.target.value.length == textInput.getAttribute('data-length')) {
+// 		textInput.classList.add('valid')
+// 		if (textInput.classList.contains('invalid')) {
+// 			textInput.classList.remove('invalid')
+// 		}
+// 	} else {
+// 		if (textInput.classList.contains('valid')) {
+// 			textInput.classList.remove('valid')
+// 		}
+// 		textInput.classList.add('invalid')
+// 	}
+// })
 
-// validInput.addEventListener('blur', changeClass);
+
+// const refs = {
+// 	inputEl: document.querySelector('#validation-input'),
+// };
+
+// const symbals = Number(refs.inputEl.dataset.length);
+// console.log(symbals);
+
+// refs.inputEl.addEventListener('blur', onInputBlur);
+
+// function onInputBlur(event) {
+// 	console.log(event.currentTarget.value.length);
+// 	event.currentTarget.value.length === symbals
+// 	? refs.inputEl.classList.add('valid')
+// 	: refs.inputEl.classList.add('invelid');
+// }
+
+
+
+// const validInput = document.querySelector("#validation-input");
+// const dataValue = Number(validInput.dataset.length);
+
+// validInput.addEventListener("blur", changeClass);
 
 // function changeClass(event) {
-// 	if (event.carrentTarget.value.length === 0) {
-// 		validInput.classList.remove('invalid');
-// 		validInput.classList. remove('valid');
-// 	} else if (event.carrentTarget.value.length !== dataValue) {
-// 		validInput.classList.add('invalid');
-// 		validInput.classList.remove('valid');
+// 	if (event.currentTarget.value.length === 0) {
+// 		validInput.classList.remove("invalid");
+// 		validInput.classList. remove("valid");
+// 	} else if (event.currentTarget.value.length === dataValue) {
+// 		validInput.classList.add("invalid");
+// 		validInput.classList.remove("valid");
+// 	} else if (event.currentTarget.value.length !== dataValue) {
+// 		validInput.classList.add("invalid");
+// 		validInput.classList.remove("valid");
 // 	}
 // }
+
+
+
+// const input = document.querySelector("#validation-input");
+// input.addEventListener("blur", onValidInput);
+
+// function onValidInput() {
+//     if (input.value.length === Number(input.dataset.length)) {
+//         input.classList.add('valid');
+//     } else {
+//         input.classList.add('invalid');
+//     }
+//     // console.log(currentTarget.value.length);
+//     console.log(input.dataset.length);
+// }
+
+
+
+
+const inputRef = document.querySelector('#validation-input');
+
+const symbolLength = Number(inputRef.dataset.length);
+
+const onInputBlurAdd = event => {
+	if (event.currentTarget.value.length >= symbolLength) {
+		inputRef.classList.add('valid');
+		inputRef.classList.remove('invalid'); 
+	} else {
+		inputRef.classList.add('invalid');
+		inputRef.classList.remove('valid');
+	}
+};
+
+inputRef.addEventListener('blur', onInputBlurAdd);
+
 
 
 TASK-07
